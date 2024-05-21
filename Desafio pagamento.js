@@ -4,16 +4,16 @@ function calcularValorFinal(precoEtiqueta, condicaoPagamento) {
     switch(condicaoPagamento) {
         case 'dinheiro':
         case 'pix':
-            valorFinal = precoEtiqueta * 0.90; // 10% de desconto
+            valorFinal = precoEtiqueta * 0.90; 
             break;
         case 'cartao':
-            valorFinal = precoEtiqueta * 0.95; // 5% de desconto
+            valorFinal = precoEtiqueta * 0.95; 
             break;
         case '2x':
-            valorFinal = precoEtiqueta; // sem juros
+            valorFinal = precoEtiqueta; 
             break;
         case '3x ou mais':
-            valorFinal = precoEtiqueta * 1.10; // 10% de juros
+            valorFinal = precoEtiqueta * 1.10; 
             break;
         default:
             console.log("Condição de pagamento inválida.");
@@ -23,9 +23,9 @@ function calcularValorFinal(precoEtiqueta, condicaoPagamento) {
     return valorFinal;
 }
 
-// Exemplo de uso:
-const precoEtiqueta = 100.00; // Defina o preço de etiqueta do produto
-const condicaoPagamento = 'pix'; // Escolha a condição de pagamento: 'dinheiro', 'pix', 'cartao', '2x', '3x ou mais'
+
+const precoEtiqueta = 100.00; 
+const condicaoPagamento = 'pix'; 
 
 const valorAPagar = calcularValorFinal(precoEtiqueta, condicaoPagamento);
 if (valorAPagar !== null) {
